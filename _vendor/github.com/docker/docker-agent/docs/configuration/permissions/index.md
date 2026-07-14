@@ -25,6 +25,8 @@ Permissions can be defined at two levels:
 | **Agent-level** | Agent YAML config (`permissions:` section) | Applies to that specific agent config |
 | **Global (user-level)** | `~/.config/cagent/config.yaml` under `settings.permissions` | Applies to every agent you run |
 
+Hooks follow the same user-config pattern: agent-level hooks live under `agents.<name>.hooks`, and global hooks live under `settings.hooks`. See [Hooks](../hooks/index.md#global-user-level-hooks).
+
 Both levels use the same `allow`/`ask`/`deny` pattern syntax. When both are present, they are **merged** at startup -- patterns from both sources are combined into a single checker. See [Merging Behavior](#merging-behavior) for details.
 
 ## Agent-Level Configuration
